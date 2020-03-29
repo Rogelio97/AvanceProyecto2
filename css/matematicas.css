@@ -1,0 +1,41 @@
+#head{
+    color: greenyellow;
+  font-family: courier;
+  font-size: 160%;
+  border: 1px solid powderblue; 
+  padding: 30px; 
+	
+}
+#rectangulo{
+    width: 200px;
+    height: 100px;
+    background-color: indianred;
+}
+#altura{
+    color: rgb(255, 182, 47);
+    font-family: courier;
+    font-size: 30px;
+    border: 1px solid powderblue; 
+    padding: 10px; 
+}
+#base{
+    color: rgb(255, 189, 47);
+    font-family: courier;
+    font-size: 30px;
+    border: 1px solid powderblue; 
+    padding: 10px; 
+}
+#textarea1{
+    color: rgb(238, 47, 255);
+    font-family: courier;
+    font-size: 30px;
+    border: 1px solid powderblue; 
+    padding: 10px; 
+}
+#textarea2{
+    color: rgb(255, 47, 82);
+    font-family: courier;
+    font-size: 30px;
+    border: 1px solid powderblue; 
+    padding: 10px; 
+}
