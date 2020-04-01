@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Citas Famosas</h1>
+        <div id="prueba"></div>
+ 
+        <form action="#" onsubmit="frases()">
+            Frase: <input id="frase" type="text" name="frase"><br>
+            <input type="submit" value="Añadir">
+        </form>
+        <script>
+            matriz=[];
+            contador=0;
+ 
+            function frases(){
+                var frase=document.getElementById("frase").value;
+                matriz[contador]=frase;
+                var intermedio=matriz[contador];
+ 
+                document.getElementById("prueba").innerHTML += matriz[contador];
+                document.write(matriz[i]);
+ 
+                contador++;
+ 
+            }
+        </script>
+    </body>
+</html>

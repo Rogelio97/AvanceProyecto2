@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <link href="..\css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="../css/espanol.css">
+    <title>Juego de Preguntas</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrap">
+            <!--logo-->
+            <div class="logo">
+                <a style="font-size: 30px;">Los Washines</a>
+            </div>
+        
+            <div class="top-nav">
+                <ul>
+
+                    <li><a href="../index.html">Inicio</a></li>
+                </ul>
+            </div>
+            <div class="clear"> </div>
+       
+        </div>
+      
+    </div>
+
+    <h1 id="enca">Quizz</h1>
+    <br> <br>
+    <p id="desc">Probaremos tu habilidades en español
+        con una sencillas preguntas, ¿Aceptas el reto?
+    </p>
+        <br>
+    <h2 id="preg"></h2>
+    <br>
+    <input type="text" id="dato">
+    <button id="boton">Siguiente Pregunta</button>
+    <p id="resolucion"></p>
+
+    <script>
+        // Array bidimensional donde se guardarán las preguntas junto a sus respuestas correctas ...
+
+        var preguntas = [
+            ['¿Que animal se encuentra en el centro de la Bandera Mexicana?', 'aguila'],
+            ['¿Cuánto es 3^3?', '27'],
+            ['¿Qué color resulta al mezclar el azul con el amarillo?', 'verde'],
+            ['¿En qué deporte destacó Sabonis?', 'baloncesto'],
+            ['¿Cuántos jugadores participan en un partido de fútbol?', '22'],
+            ['¿Quien fue el niño Heroe que se lanzo con la Bandera?', 'juan escutia'],
+            ['¿por donde introducimos un texto en una computadora?', 'teclado'],
+            ['64 / 4 es igual a...', '16'],
+            ['¿Cómo se le llama nuestro planeta?', 'tierra'],
+            ['¿De qué color es el caballo blanco de Santiago?', 'blanco']
+        ],
+            pregunta, respuesta,
+            formuladas = 0,
+            acertadas = 0;
+
+
+        hazPregunta();
+
+
+
+        document.getElementById('boton').addEventListener('click', function () {
+            var entrada = document.getElementById("dato").value;
+
+            if (entrada == respuesta) {
+                acertadas++;
+            }
+
+            if (formuladas < 5) {
+                hazPregunta();
+
+            }
+            else {
+                muestraResultado();
+            }
+        });
+
+        //Formula una pregunta al usuario...
+        function hazPregunta() {
+            var e;			// simple variable auxiliar
+
+            // se extrae una pregunta/respuesta al azar del array...
+
+            e = preguntas.splice(numAleat(0, preguntas.length - 1), 1);
+            pregunta = e[0][0];			// se guardan la pregunta y la respuesta 
+            respuesta = e[0][1];
+
+            document.getElementById('preg').innerHTML = pregunta;        // se muestra la pregunta
+            document.getElementById('dato').value = '';                  // se borra lo escrito anteriormente por el usuario
+
+            formuladas++;
+        }
+
+        // Comprueba el número de preguntas acertadas y muestra mensaje en función de este...
+
+        function muestraResultado() {
+            var resultado;      // para guardar el mensaje con el resultado
+
+            switch (acertadas) {
+                case 0:
+                    resultado = 'No has acertado una sola pregunta, toca estudiar :-/';
+                    break;
+                case 1:
+                    resultado = 'Bueno, al menos has acertado una pregunta :-)';
+                    break;
+                case 2:
+                    resultado = 'Solo 2 preguntas acertadas de 5. Toca mejorar.';
+                    break;
+                case 3:
+                    resultado = 'No está mal, 3/5 acertadas.';
+                    break;
+                case 4:
+                    resultado = 'Muy bien, has acertado 4 preguntas :-)';
+                    break;
+                case 5:
+                    resultado = '¡EXCELENTE, has acertado correctamente las 5 preguntas!';
+                    break;
+
+            }
+
+            document.getElementById('resolucion').innerHTML = resultado;
+        }
+
+        //Devuelve un número aleatorio entero entre 'min' y 'max' (ambos inclusive)
+        function numAleat(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+
+
+</body>
+
+</html>

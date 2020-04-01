@@ -1,0 +1,22 @@
+#myProgress {
+    width: 100%;
+    background-color: #ddd;
+}
+
+#IndicadorIncorecto {
+    width: 0%;
+    height: 30px;
+    background-color: red;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+#IndicadorCorrecto {
+    width: 0%;
+    height: 30px;
+    background-color: yellow;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}

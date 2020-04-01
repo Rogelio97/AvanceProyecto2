@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/estadisticas.css">
+    <link href="..\css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Matematicas</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrap">
+            <!--start-logo-->
+            <div class="logo">
+                <a style="font-size: 30px;">Los Washines</a>
+            </div>
+            <!--end-logo-->
+            <!--start-top-nav-->
+            <div class="top-nav">
+                <ul>
+
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Menus/Menu_Matematicas.html">ATRAS</a></li>
+                </ul>
+
+            </div>
+            <div class="clear"> </div>
+            <!--end-top-nav-->
+        </div>
+        <!--end-header-->
+    </div>
+
+    <div id="Operaciones" class="tabcontent">
+        <div class="container">
+
+            <div class="panel">
+
+                </br>
+                <h2>Suma</h2>
+
+                <div style="width: 100%;"><input type="button" id="bloquear" class="button3" onclick="generarSuma()"
+                        value="Generar Números">
+                    <br>
+                    <h1 id="msjBloq"></h1>
+                </div>
+
+                <p id="generarTotal"></p>
+
+                <br>
+                <a id="suma1">Generar Número</a> 
+                <a id="suma2">Generar Número</a> =
+                <input id="repRespuesta" type="number" placeholder="Escribe la respuesta"><br>
+                <p id="msjVali"></p>
+                <a id="resultado "></a>
+                <div style="width: 100%; ">
+                    <input type="button" class="button2" onclick="comparacionSuma()" value="Verificar">
+                    <br><br>
+                    <h1 id="correctoIncorectRespuesta"></h1>
+                    </br>
+                    <h1 id="acumuladorCorrec"></h1>
+                    </br>
+                    <h1 id="acumuladorIncorrec"></h1>
+                    <br>
+                </div>
+                <div style="width: 100%;">
+
+                    <button class="button2" onclick="porcentajeEjercicio()">Ver porcentaje</button>
+                    <br>
+                    <div id="myProgress">
+                        <div id="IndicadorIncorecto">0%</div>
+                    </div>
+                    <br>
+                    <div id="myProgress">
+                        <div id="IndicadorCorrecto">0%</div>
+                       
+                    </div>
+                </div>
+
+                <script src="../Funciones/Estadistica.js"></script>
+                <script src="../Funciones/Sumas.js"></script>
+                <script>
+                    window.onscroll = function () {
+                        scrollFunction()
+                    };
+
+                    const scrollFunction = () => {
+                        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                            document.getElementById("navbar").style.padding = "30px 10px";
+                            document.getElementById("logo").style.fontSize = "25px";
+                        } else {
+                            document.getElementById("navbar").style.padding = "50px 10px";
+                            document.getElementById("logo").style.fontSize = "25px";
+                        }
+                    }
+                </script>
+
+</body>
+
+</html>

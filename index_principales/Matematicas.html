@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="..\css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="../css/matematicas.css">
+    <title>Matematicas</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="wrap">
+
+            <div class="logo">
+                <a style="font-size: 30px;">Los Washines</a>
+            </div>
+
+            <div class="top-nav">
+                <ul>
+
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../Menus/Menu_Matematicas.html">ATRAS</a></li>
+                </ul>
+
+            </div>
+            <div class="clear"> </div>
+        </div>
+
+    </div>
+
+    <h1 id="head">Bienvenido a la sección de ordenar numeros</h1>
+    <br>
+
+    <h2>Calcular el area y perimetro de un rectangulo</h2>
+
+    <div id="rectangulo"></div>
+    <br><br>
+    <div class="col-mid4">
+        <input type="number" id="base" placeholder="Base" class="form-control">
+        <input type="numero" id="altura" placeholder="Altura" class="form-control">
+        <button onclick="obtenerperimetro()" class="btn">Calcular Perimetro</button>
+
+        <button onclick="obtenerArea()" class="btn_a">Calcular Area</button>
+        <h3>Recuerde que para sacar el perimetro del rectangulo es
+            base más altura por 2 (a+b)*x</h3>
+
+    </div>
+    <div class="col-mid4">
+        <h2>Perimetro</h2>
+        <div id="perimetroResultado"></div>
+    </div>
+    <br>
+    <textarea id="textarea1" class="form-control">
+        </textarea>
+    </div>
+    <div class="col-mid4">
+        <h3>El area es mas sencillo
+            base por altura (b*h)
+        </h3>
+        <h2>Area</h2>
+        <div id="perimetroResultado2">
+        </div>
+        <br>
+        <textarea id="textarea2" class="form-control"></textarea>
+    </div>
+
+    <script src="../Funciones/Matematicas.js"></script>
+    
+</body>
+
+</html>
