@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="..\css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="../css/matematicas.css">
-    <title>Matematicas</title>
-
+    <title>Potenciacion</title>
 </head>
-
 <body>
     <div class="header">
         <div class="wrap">
@@ -32,44 +29,31 @@
     </div>
 
     <h1 id="head">Bienvenido a la sección de Matematicas</h1>
-    <br>
 
-    <h2>Calcular el area y perimetro de un rectangulo</h2>
+    <h2 id="head">Conociendo las potencias</h2>
+    <p>En esta seccion aprenderas a elevar a un cierto numero a otro numero
+        no se debe de confundir con las multiliplicaciones
+        se multplica por las veces que que se quiera
+        por ejemplo (2^3) quiere decir que el numero 2 se mutiplicara 3 veces
+        dando como resultado 8
+    </p>
+    <br> 
 
-    <div id="rectangulo"></div>
-    <br><br>
     <div class="col-mid4">
         
-        <input type="number" id="base" placeholder="Base" class="form-control">
-        <input type="numero" id="altura" placeholder="Altura" class="form-control">
-        <button onclick="obtenerperimetro()" class="btn">Calcular Perimetro</button>
-
-        <button onclick="obtenerArea()" class="btn_a">Calcular Area</button>
-        <h3>Recuerde que para sacar el perimetro del rectangulo es
-            base más altura por 2 (a+b)*x</h3>
+        <input type="number" id="num" placeholder="Numero" class="form-control">
+        <input type="numero" id="elev" placeholder="Numero de multplicaciones" class="form-control">
+        <button onclick="potencia()" class="btn">Calcular Potencia</button>
 
     </div>
     <div class="col-mid4">
-        <h2>Perimetro</h2>
-        <div id="textarea1"></div>
+        <h2>Resultado de la elevacion</h2>
+        <div id="potenciaResultado "></div>
     </div>
     <br>
     <textarea id="textarea1" class="form-control">
         </textarea>
-    </div>
-    <div class="col-mid4">
-        <h3>El area es mas sencillo
-            base por altura (b*h)
-        </h3>
-        <h2>Area</h2>
-        <div id="perimetroResultado2">
-        </div>
-        <br>
-        <textarea id="textarea2" class="form-control"></textarea>
-    </div>
 
-    <script src="../Funciones/Matematicas.js"></script>
-    
+        <script src="../Funciones/potenciacion.js"></script>
 </body>
-
 </html>

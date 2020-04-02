@@ -1,4 +1,4 @@
-1.- La primera funcion se puede ver en la suma de numeros,
+﻿1.- La primera funcion se puede ver en la suma de numeros,
 en donde se genera 2 numeros aleatorios el cual el usuario escribira el resultado de la suma,
 al momento de verificar en la pantalla se mostrara el numero ingresado por el usuario  y mandara un mensaje si correcto o incorrecto.
 2.- La segunda funcion se genera una estadisticas de los resultados de la suma que realizo el usuario en donde muestra las barras con el % que saco de los ejercicios.
@@ -7,3 +7,9 @@ seguidamente al seleccionar el boton de calcular, se le dara el area o el perime
 4.-La Cuarta funcion se encuentra en el Quizz de español, en donde se presenta unas series de preguntas que se genera de forma aleatoria, 
 y en donde el usuario debera escribir la respuesta correcta, de este modo pasa a la siguiente pregunta, guardando la respuesta y asi sucesivamente hasta
 alcanzar el numero de preguntas, y al final se retorna un valor en donde se indica por pantalla, el numero de aciertos que se obtuvo.
+5.- La quinta funcion es cuando el usuario ingresa numeros aleatorios y se verificia que el numero sea primo o no 
+y retorna si es verdadero o falso
+6.- la sexta funcion es la que el usuario ingrese dos un valor y despues otro valor 
+el primero valor se elevara por el segundo valor 
+7.- la septima funcion es el factorial de un numero
+    el usuario ingresa un valor y mediante la recursividad se calcula su factorial
